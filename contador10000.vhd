@@ -8,7 +8,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity contador10000 is
 	port(
 		clk,reset	:	in 	std_logic :='0';
-		speed			:	in		std_logic :='0';
 		led 			:	inout	std_logic :='0';
 		an				:	out	std_logic_vector(0 to 3);
 		ca				:	out	std_logic_vector(0 to 6)
@@ -24,7 +23,7 @@ type 	digit	is array(0 to 9) of std_logic_vector(0 to 6);
 constant DIGITS : digit := ("0000001","1001111","0010010","0000110","1001100","0100100","0100000","0001111","0000000","0001100");
 
 signal k			: integer RANGE 0 to		4500000	:=	0;
-signal i			: integer RANGE 0 to 	3000000	:=	0;
+signal i			: integer RANGE 0 to 	1500000	:=	0;
 signal j 		: integer RANGE 0 to 		1000	:= 0;
 signal a,b,c,d : integer RANGE 0 to 9;
 
@@ -33,14 +32,14 @@ signal x : integer RANGE 1 to 4	:=1;
 
 begin
 
-process(clk,speed)
+process(clk)
 	begin
 	if(clk'event AND clk='1') then		
 		i	<=	i + 1;
 		j 	<= j + 1;
 		--k	<= k + 1;
 		
-		if i = 3000000 then
+		if i = 1500000 then
 		
 		led <= not led;
 		i 		<= 0;
@@ -56,8 +55,11 @@ process(clk,speed)
 	end if;
 end process;
 
-process(reset,led)
+process(led,reset)
 begin
+if reset='1' then
+a <= 0;b <= 0;c <= 0;d <= 0;
+else
 	if(led'event and led='1') then
 		if a = 9 then
 			a <= 0;
@@ -84,7 +86,9 @@ begin
 			a <= a + 1;
 		end if;
 	end if;
+end if;
 end process;
+
 
 process(q)
 	begin

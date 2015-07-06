@@ -1,6 +1,5 @@
 NET "clk"	LOC	= 	"V10";
-NET "reset"	LOC	=	"T10";
-NET "speed" LOC	=	"T5";
+NET "reset"	LOC	=	"C9";
 NET "led"	LOC	= 	"U16";
 
 NET "ca<0>"	LOC	=	"T17";

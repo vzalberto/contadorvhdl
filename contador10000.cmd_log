@@ -167,3 +167,23 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off contador10000_map.ncd contador10000.ncd contador10000.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contador10000.twx contador10000.ncd -o contador10000.twr contador10000.pcf -ucf pins.ucf 
 bitgen -intstyle ise -f contador10000.ut contador10000.ncd 
+xst -intstyle ise -ifn "C:/Users/Lilia/Digital/cuenta10000/contador10000.xst" -ofn "C:/Users/Lilia/Digital/cuenta10000/contador10000.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc6slx16-csg324-3 contador10000.ngc contador10000.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o contador10000_map.ncd contador10000.ngd contador10000.pcf 
+par -w -intstyle ise -ol high -mt off contador10000_map.ncd contador10000.ncd contador10000.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contador10000.twx contador10000.ncd -o contador10000.twr contador10000.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f contador10000.ut contador10000.ncd 
+xst -intstyle ise -ifn "C:/Users/Lilia/Digital/cuenta10000/contador10000.xst" -ofn "C:/Users/Lilia/Digital/cuenta10000/contador10000.syr" 
+xst -intstyle ise -ifn "C:/Users/Lilia/Digital/cuenta10000/contador10000.xst" -ofn "C:/Users/Lilia/Digital/cuenta10000/contador10000.syr" 
+xst -intstyle ise -ifn "C:/Users/Lilia/Digital/cuenta10000/contador10000.xst" -ofn "C:/Users/Lilia/Digital/cuenta10000/contador10000.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc6slx16-csg324-3 contador10000.ngc contador10000.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o contador10000_map.ncd contador10000.ngd contador10000.pcf 
+par -w -intstyle ise -ol high -mt off contador10000_map.ncd contador10000.ncd contador10000.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contador10000.twx contador10000.ncd -o contador10000.twr contador10000.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f contador10000.ut contador10000.ncd 
+xst -intstyle ise -ifn "C:/Users/Lilia/Digital/cuenta10000/contador10000.xst" -ofn "C:/Users/Lilia/Digital/cuenta10000/contador10000.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc6slx16-csg324-3 contador10000.ngc contador10000.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o contador10000_map.ncd contador10000.ngd contador10000.pcf 
+par -w -intstyle ise -ol high -mt off contador10000_map.ncd contador10000.ncd contador10000.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contador10000.twx contador10000.ncd -o contador10000.twr contador10000.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f contador10000.ut contador10000.ncd 
