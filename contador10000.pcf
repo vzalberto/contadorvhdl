@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.40xd on Sun Jul 05 23:09:07 2015
+// Written by: Map P.40xd on Mon Jul 06 17:12:04 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -8,6 +8,7 @@ COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
 COMP "led" LOCATE = SITE "U16" LEVEL 1;
 COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
 COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "speed" LOCATE = SITE "T5" LEVEL 1;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "ca<0>" LOCATE = SITE "T17" LEVEL 1;
 COMP "ca<1>" LOCATE = SITE "T18" LEVEL 1;

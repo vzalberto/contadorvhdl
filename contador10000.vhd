@@ -7,10 +7,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity contador10000 is
 	port(
-		clk,reset	:	in 	std_logic :='0';
-		led 			:	inout	std_logic :='0';
-		an				:	out	std_logic_vector(0 to 3);
-		ca				:	out	std_logic_vector(0 to 6)
+		clk,reset,speed	:	in 	std_logic :='0';
+		led 					:	inout	std_logic :='0';
+		an						:	out	std_logic_vector(0 to 3);
+		ca						:	out	std_logic_vector(0 to 6)
 		);
 end contador10000;
 
@@ -22,8 +22,8 @@ constant DISPLAYS : display := ("0111","1011","1101","1110");
 type 	digit	is array(0 to 9) of std_logic_vector(0 to 6);
 constant DIGITS : digit := ("0000001","1001111","0010010","0000110","1001100","0100100","0100000","0001111","0000000","0001100");
 
-signal k			: integer RANGE 0 to		4500000	:=	0;
-signal i			: integer RANGE 0 to 	1500000	:=	0;
+signal k			: integer RANGE 0 to		 325000	:=	0;
+signal i			: integer RANGE 0 to 	6000000	:=	0;
 signal j 		: integer RANGE 0 to 		1000	:= 0;
 signal a,b,c,d : integer RANGE 0 to 9;
 
@@ -32,19 +32,29 @@ signal x : integer RANGE 1 to 4	:=1;
 
 begin
 
-process(clk)
+process(clk,speed)
 	begin
 	if(clk'event AND clk='1') then		
 		i	<=	i + 1;
 		j 	<= j + 1;
-		--k	<= k + 1;
+		k	<= k + 1;
 		
-		if i = 1500000 then
+		if speed='1' then
+			if i = 6000000 then
+			
+			led <= not led;
+			i 		<= 0;
+			
+			end if;
 		
-		led <= not led;
-		i 		<= 0;
-		
+		else
+			if  k = 325000 then
+			
+			led <= not led;
+			i 		<= 0;
+			end if;
 		end if;
+		
 			
 		if j = 1000 then
 		
@@ -102,7 +112,7 @@ process(q)
 
 end process;
 
-process(x)
+process(a,b,c,d,x)
 begin
    
 	case x is
