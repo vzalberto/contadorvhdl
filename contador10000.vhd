@@ -98,15 +98,15 @@ process(q)
 
 end process;
 
-process(a,b,c,d)
+process(x)
 begin
    
 	case x is
 
-	when 1 => ca <= DIGITS(a);				--menos significativo
-	when 2 => ca <= DIGITS(b);
-	when 3 => ca <= DIGITS(c);
-	when 4 => ca <= DIGITS(d);
+	when 1 => ca <= DIGITS(d);				--menos significativo
+	when 2 => ca <= DIGITS(a);
+	when 3 => ca <= DIGITS(b);
+	when 4 => ca <= DIGITS(c);
 	end case;
 end process;
 

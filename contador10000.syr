@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Reading design: contador10000.prj
 
@@ -114,7 +114,10 @@ Parsing architecture <cuenta> of entity <contador10000>.
 =========================================================================
 
 Elaborating entity <contador10000> (architecture <cuenta>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\Lilia\Digital\cuenta10000\contador10000.vhd" Line 104: x should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lilia\Digital\cuenta10000\contador10000.vhd" Line 106: d should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lilia\Digital\cuenta10000\contador10000.vhd" Line 107: a should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lilia\Digital\cuenta10000\contador10000.vhd" Line 108: b should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Lilia\Digital\cuenta10000\contador10000.vhd" Line 109: c should be on the sensitivity list of the process
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -124,7 +127,7 @@ Synthesizing Unit <contador10000>.
     Related source file is "C:\Users\Lilia\Digital\cuenta10000\contador10000.vhd".
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <speed> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 23-bit register for signal <k>.
+    Found 10-bit register for signal <j>.
     Found 1-bit register for signal <led>.
     Found 1-bit register for signal <q>.
     Found 4-bit register for signal <a>.
@@ -133,23 +136,23 @@ WARNING:Xst:647 - Input <speed> is never used. This port will be preserved and l
     Found 4-bit register for signal <d>.
     Found 4-bit register for signal <an>.
     Found 3-bit register for signal <x>.
-    Found 10-bit register for signal <j>.
-    Found 10-bit adder for signal <j[9]_GND_3_o_add_0_OUT> created at line 40.
-    Found 23-bit adder for signal <k[22]_GND_3_o_add_1_OUT> created at line 41.
+    Found 22-bit register for signal <i>.
+    Found 22-bit adder for signal <i[21]_GND_3_o_add_0_OUT> created at line 39.
+    Found 10-bit adder for signal <j[9]_GND_3_o_add_1_OUT> created at line 40.
     Found 4-bit adder for signal <d[3]_GND_3_o_add_12_OUT> created at line 74.
     Found 4-bit adder for signal <c[3]_GND_3_o_add_14_OUT> created at line 77.
     Found 4-bit adder for signal <b[3]_GND_3_o_add_17_OUT> created at line 80.
     Found 4-bit adder for signal <a[3]_GND_3_o_add_21_OUT> created at line 84.
     Found 3-bit adder for signal <x[2]_GND_3_o_add_32_OUT> created at line 95.
     Found 8x4-bit Read Only RAM for signal <x[2]_X_3_o_wide_mux_30_OUT>
-    Found 16x7-bit Read Only RAM for signal <a[3]_X_3_o_wide_mux_36_OUT>
-    Found 16x7-bit Read Only RAM for signal <b[3]_X_3_o_wide_mux_37_OUT>
-    Found 16x7-bit Read Only RAM for signal <c[3]_X_3_o_wide_mux_38_OUT>
-    Found 16x7-bit Read Only RAM for signal <d[3]_X_3_o_wide_mux_39_OUT>
+    Found 16x7-bit Read Only RAM for signal <d[3]_X_3_o_wide_mux_36_OUT>
+    Found 16x7-bit Read Only RAM for signal <a[3]_X_3_o_wide_mux_37_OUT>
+    Found 16x7-bit Read Only RAM for signal <b[3]_X_3_o_wide_mux_38_OUT>
+    Found 16x7-bit Read Only RAM for signal <c[3]_X_3_o_wide_mux_39_OUT>
     Summary:
 	inferred   5 RAM(s).
 	inferred   7 Adder/Subtractor(s).
-	inferred  58 D-type flip-flop(s).
+	inferred  57 D-type flip-flop(s).
 	inferred   4 Multiplexer(s).
 Unit <contador10000> synthesized.
 
@@ -162,13 +165,13 @@ Macro Statistics
  8x4-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 7
  10-bit adder                                          : 1
- 23-bit adder                                          : 1
+ 22-bit adder                                          : 1
  3-bit adder                                           : 1
  4-bit adder                                           : 4
 # Registers                                            : 10
  1-bit register                                        : 2
  10-bit register                                       : 1
- 23-bit register                                       : 1
+ 22-bit register                                       : 1
  3-bit register                                        : 1
  4-bit register                                        : 5
 # Multiplexers                                         : 4
@@ -183,8 +186,8 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <contador10000>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
 The following registers are absorbed into counter <j>: 1 register on signal <j>.
-The following registers are absorbed into counter <k>: 1 register on signal <k>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
 The following registers are absorbed into counter <a>: 1 register on signal <a>.
 The following registers are absorbed into counter <b>: 1 register on signal <b>.
@@ -201,7 +204,7 @@ INFO:Xst:3231 - The small RAM <Mram_x[2]_X_3_o_wide_mux_30_OUT> will be implemen
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_a[3]_X_3_o_wide_mux_36_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_a[3]_X_3_o_wide_mux_37_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -212,7 +215,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_a[3]_X_3_o_wide_mux_36_OUT> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_b[3]_X_3_o_wide_mux_37_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_b[3]_X_3_o_wide_mux_38_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -223,7 +226,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_b[3]_X_3_o_wide_mux_37_OUT> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_c[3]_X_3_o_wide_mux_38_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_c[3]_X_3_o_wide_mux_39_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -234,7 +237,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_c[3]_X_3_o_wide_mux_38_OUT> will be 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_d[3]_X_3_o_wide_mux_39_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_d[3]_X_3_o_wide_mux_36_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -256,7 +259,7 @@ Macro Statistics
  8x4-bit single-port distributed Read Only RAM         : 1
 # Counters                                             : 7
  10-bit up counter                                     : 1
- 23-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
  3-bit up counter                                      : 1
  4-bit up counter                                      : 4
 # Registers                                            : 6
@@ -282,8 +285,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 58
- Flip-Flops                                            : 58
+# Registers                                            : 57
+ Flip-Flops                                            : 57
 
 =========================================================================
 
@@ -306,22 +309,21 @@ Top Level Output File Name         : contador10000.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 217
+# BELS                             : 207
 #      GND                         : 1
 #      INV                         : 5
-#      LUT1                        : 31
-#      LUT2                        : 35
-#      LUT3                        : 10
+#      LUT1                        : 30
+#      LUT2                        : 15
+#      LUT3                        : 7
 #      LUT4                        : 12
-#      LUT5                        : 24
-#      LUT6                        : 33
-#      MUXCY                       : 31
-#      MUXF7                       : 1
+#      LUT5                        : 44
+#      LUT6                        : 30
+#      MUXCY                       : 30
 #      VCC                         : 1
-#      XORCY                       : 33
-# FlipFlops/Latches                : 58
-#      FD                          : 44
-#      FDR                         : 14
+#      XORCY                       : 32
+# FlipFlops/Latches                : 57
+#      FD                          : 53
+#      FDR                         : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 12
@@ -334,16 +336,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              58  out of  18224     0%  
- Number of Slice LUTs:                  150  out of   9112     1%  
-    Number used as Logic:               150  out of   9112     1%  
+ Number of Slice Registers:              57  out of  18224     0%  
+ Number of Slice LUTs:                  143  out of   9112     1%  
+    Number used as Logic:               143  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    150
-   Number with an unused Flip Flop:      92  out of    150    61%  
-   Number with an unused LUT:             0  out of    150     0%  
-   Number of fully used LUT-FF pairs:    58  out of    150    38%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    143
+   Number with an unused Flip Flop:      86  out of    143    60%  
+   Number with an unused LUT:             0  out of    143     0%  
+   Number of fully used LUT-FF pairs:    57  out of    143    39%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          15
@@ -374,8 +376,8 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 q                                  | NONE(an_3)             | 7     |
-clk                                | BUFGP                  | 35    |
 led_OBUF                           | NONE(a_0)              | 16    |
+clk                                | BUFGP                  | 34    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -387,9 +389,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.963ns (Maximum Frequency: 252.337MHz)
+   Minimum period: 3.597ns (Maximum Frequency: 277.975MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 7.051ns
+   Maximum output required time after clock: 7.533ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -398,10 +400,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'q'
-  Clock period: 2.405ns (frequency: 415.826MHz)
+  Clock period: 2.487ns (frequency: 402.042MHz)
   Total number of paths / destination ports: 15 / 7
 -------------------------------------------------------------------------
-Delay:               2.405ns (Levels of Logic = 1)
+Delay:               2.487ns (Levels of Logic = 1)
   Source:            x_2 (FF)
   Destination:       an_3 (FF)
   Source Clock:      q rising
@@ -411,104 +413,103 @@ Delay:               2.405ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              19   0.447   1.071  x_2 (x_2)
+     FD:C->Q              23   0.447   1.153  x_2 (x_2)
      INV:I->O              1   0.206   0.579  Mram_x[2]_X_3_o_wide_mux_30_OUT12_INV_0 (Mram_x[2]_X_3_o_wide_mux_30_OUT)
      FD:D                      0.102          an_3
     ----------------------------------------
-    Total                      2.405ns (0.755ns logic, 1.650ns route)
-                                       (31.4% logic, 68.6% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.911ns (frequency: 255.669MHz)
-  Total number of paths / destination ports: 995 / 45
--------------------------------------------------------------------------
-Delay:               3.911ns (Levels of Logic = 3)
-  Source:            k_13 (FF)
-  Destination:       k_0 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: k_13 to k_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.961  k_13 (k_13)
-     LUT5:I0->O            3   0.203   0.879  PWR_3_o_k[22]_equal_3_o<22>2 (PWR_3_o_k[22]_equal_3_o<22>1)
-     LUT6:I3->O           12   0.205   0.909  PWR_3_o_k[22]_equal_3_o<22>5 (PWR_3_o_k[22]_equal_3_o)
-     LUT2:I1->O            1   0.205   0.000  k_0_rstpot (k_0_rstpot)
-     FD:D                      0.102          k_0
-    ----------------------------------------
-    Total                      3.911ns (1.162ns logic, 2.749ns route)
-                                       (29.7% logic, 70.3% route)
+    Total                      2.487ns (0.755ns logic, 1.732ns route)
+                                       (30.4% logic, 69.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'led_OBUF'
-  Clock period: 3.963ns (frequency: 252.337MHz)
-  Total number of paths / destination ports: 220 / 20
+  Clock period: 3.174ns (frequency: 315.040MHz)
+  Total number of paths / destination ports: 165 / 20
 -------------------------------------------------------------------------
-Delay:               3.963ns (Levels of Logic = 3)
-  Source:            a_3 (FF)
-  Destination:       c_3 (FF)
+Delay:               3.174ns (Levels of Logic = 1)
+  Source:            a_2 (FF)
+  Destination:       a_0 (FF)
   Source Clock:      led_OBUF rising
   Destination Clock: led_OBUF rising
 
-  Data Path: a_3 to c_3
+  Data Path: a_2 to a_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             20   0.447   1.437  a_3 (a_3)
-     LUT5:I0->O            1   0.203   0.684  _n01051_SW5 (N31)
-     LUT6:I4->O            1   0.203   0.684  c_3_rstpot (c_3_rstpot)
-     LUT2:I0->O            1   0.203   0.000  c_3_rstpot1 (c_3_rstpot1)
-     FD:D                      0.102          c_3
+     FDR:C->Q             11   0.447   1.111  a_2 (a_2)
+     LUT4:I1->O           15   0.205   0.981  _n0105111 (_n010511)
+     FDR:R                     0.430          a_0
     ----------------------------------------
-    Total                      3.963ns (1.158ns logic, 2.805ns route)
-                                       (29.2% logic, 70.8% route)
+    Total                      3.174ns (1.082ns logic, 2.092ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.597ns (frequency: 277.975MHz)
+  Total number of paths / destination ports: 926 / 34
+-------------------------------------------------------------------------
+Delay:               3.597ns (Levels of Logic = 3)
+  Source:            j_5 (FF)
+  Destination:       j_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: j_5 to j_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.961  j_5 (j_5)
+     LUT5:I0->O            2   0.203   0.617  PWR_3_o_j[9]_equal_5_o<9>_SW0 (N01)
+     LUT6:I5->O           10   0.205   0.857  PWR_3_o_j[9]_equal_5_o<9> (PWR_3_o_j[9]_equal_5_o)
+     LUT2:I1->O            1   0.205   0.000  j_0_rstpot (j_0_rstpot)
+     FD:D                      0.102          j_0
+    ----------------------------------------
+    Total                      3.597ns (1.162ns logic, 2.435ns route)
+                                       (32.3% logic, 67.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'q'
-  Total number of paths / destination ports: 49 / 11
+  Total number of paths / destination ports: 55 / 11
 -------------------------------------------------------------------------
-Offset:              6.957ns (Levels of Logic = 4)
-  Source:            x_1 (FF)
-  Destination:       ca<1> (PAD)
+Offset:              7.533ns (Levels of Logic = 4)
+  Source:            x_2 (FF)
+  Destination:       ca<3> (PAD)
   Source Clock:      q rising
 
-  Data Path: x_1 to ca<1>
+  Data Path: x_2 to ca<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              14   0.447   1.186  x_1 (x_1)
-     LUT3:I0->O            2   0.205   0.981  Mram_x[2]_X_3_o_wide_mux_30_OUT111 (Mram_x[2]_X_3_o_wide_mux_30_OUT1)
-     LUT6:I0->O            1   0.203   0.580  Mmux_ca25_SW0 (N46)
-     LUT6:I5->O            1   0.205   0.579  Mmux_ca25 (ca_1_OBUF)
-     OBUF:I->O                 2.571          ca_1_OBUF (ca<1>)
+     FD:C->Q              23   0.447   1.382  x_2 (x_2)
+     LUT3:I0->O            2   0.205   0.981  Mmux_ca311 (Mmux_ca31)
+     LUT6:I0->O            2   0.203   0.961  Mmux_ca42 (Mmux_ca42)
+     LUT5:I0->O            1   0.203   0.579  Mmux_ca46 (ca_3_OBUF)
+     OBUF:I->O                 2.571          ca_3_OBUF (ca<3>)
     ----------------------------------------
-    Total                      6.957ns (3.631ns logic, 3.326ns route)
-                                       (52.2% logic, 47.8% route)
+    Total                      7.533ns (3.629ns logic, 3.904ns route)
+                                       (48.2% logic, 51.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'led_OBUF'
-  Total number of paths / destination ports: 112 / 7
+  Total number of paths / destination ports: 128 / 7
 -------------------------------------------------------------------------
-Offset:              7.051ns (Levels of Logic = 4)
-  Source:            b_1 (FF)
-  Destination:       ca<1> (PAD)
+Offset:              7.310ns (Levels of Logic = 5)
+  Source:            a_0 (FF)
+  Destination:       ca<3> (PAD)
   Source Clock:      led_OBUF rising
 
-  Data Path: b_1 to ca<1>
+  Data Path: a_0 to ca<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              21   0.447   1.218  b_1 (b_1)
-     LUT2:I0->O            1   0.203   0.944  Mcount_b_xor<1>11 (Result<1>4)
-     LUT6:I0->O            1   0.203   0.684  Mmux_ca21 (Mmux_ca2)
-     LUT6:I4->O            1   0.203   0.579  Mmux_ca25 (ca_1_OBUF)
-     OBUF:I->O                 2.571          ca_1_OBUF (ca<1>)
+     FDR:C->Q             12   0.447   1.156  a_0 (a_0)
+     LUT4:I0->O            1   0.203   0.580  Mmux_ca41 (Mmux_ca4)
+     LUT6:I5->O            1   0.205   0.580  Mmux_ca43 (Mmux_ca41)
+     LUT6:I5->O            1   0.205   0.580  Mmux_ca44 (Mmux_ca43)
+     LUT5:I4->O            1   0.205   0.579  Mmux_ca46 (ca_3_OBUF)
+     OBUF:I->O                 2.571          ca_3_OBUF (ca<3>)
     ----------------------------------------
-    Total                      7.051ns (3.627ns logic, 3.424ns route)
-                                       (51.4% logic, 48.6% route)
+    Total                      7.310ns (3.836ns logic, 3.474ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -539,7 +540,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.911|         |         |         |
+clk            |    3.597|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock led_OBUF
@@ -547,7 +548,7 @@ Clock to Setup on destination clock led_OBUF
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-led_OBUF       |    3.963|         |         |         |
+led_OBUF       |    3.174|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock q
@@ -555,20 +556,20 @@ Clock to Setup on destination clock q
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-q              |    2.405|         |         |         |
+q              |    2.487|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.44 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.56 secs
  
 --> 
 
-Total memory usage is 191364 kilobytes
+Total memory usage is 192004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 
