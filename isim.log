@@ -1,0 +1,26 @@
+ISim log file
+Running: C:\Users\Lilia\Digital\cuenta10000\contador10000_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Lilia/Digital/cuenta10000/contador10000_isim_beh.wdb 
+ISim P.40xd (signature 0x8ef4fb42)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /contador10000/q 1 -radix bin
+# run 1.00us
+# isim force add /contador10000/q 0 -radix bin
+# run 1.00us
+# isim force add /contador10000/led 1 -radix bin
+# run 1.00us
+# show driver /contador10000/led
+Driver for /contador10000/led
+	'1'	: /contador10000/:34
+		  in File "C:/Users/Lilia/Digital/cuenta10000/contador10000.vhd" Line 34
+
+# isim force add /contador10000/led 0 -radix bin
+# run 1.00us

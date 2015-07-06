@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Lilia\Digital\cuenta10000\contador.ncd
+OUTFILE=C:\Users\Lilia\Digital\cuenta10000\contador.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Lilia\Digital\cuenta10000
+LICENSE=WebPack
+USER_INFO=211040002_0_0_539

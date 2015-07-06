@@ -1,0 +1,17 @@
+NET "clk"	LOC	= 	"V10";
+NET "reset"	LOC	=	"T10";
+NET "speed" LOC	=	"T5";
+NET "led"	LOC	= 	"U16";
+
+NET "ca<0>"	LOC	=	"T17";
+NET "ca<1>"	LOC	=	"T18";
+NET "ca<2>"	LOC	=	"U17";
+NET "ca<3>"	LOC	=	"U18";
+NET "ca<4>"	LOC	=	"M14";
+NET "ca<5>"	LOC	=	"N14";
+NET "ca<6>"	LOC	=	"L14";
+
+NET "an<0>"		LOC	=	"N16";
+NET "an<1>"		LOC	=	"N15";
+NET "an<2>"		LOC	=	"P18";
+NET "an<3>"		LOC	=	"P17";
